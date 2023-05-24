@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+   <head>
+      <meta charset="utf-8" />
+      <title>LombardGPT - Security</title>
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <meta name="description" content="LombardGPT tracks real estate investors and scores potential transactions.">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#1D4ED8" />
+      <meta name="msapplication-TileColor" content="#1d4ed8" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="css/global.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
+   </head>
+   <body>
+      <nav class="bg-blue-700 flex items-center py-6 w-full">
+         <div class="px-8"> <a class="flex-none text-white" href="/">← Home</a> </div>
+      </nav>
+      <div class="lg:max-w-4xl md:my-24 mx-auto my-16 px-8 space-y-4">
+         <h1 class="font-bold text-4xl">Lombard Standard K.K.</h1>
+         <h2 class="text-xl">Security Overview</h2>
+         <p>Sales and customer data is critical to your business and we take the security of customer data extremely seriously. We host LombardGPT using comprehensively hardened infrastructure-as-a-service (IaaS) on Amazon Web Services.</p>
+         <ol class="list-decimal mt-8">
+            <li> LombardGPT will allow authentication using Single Sign On (SSO) via SAML and OIDC. Lombard does not store any passwords for accounts using SSO. For basic authentication, passwords are securely hashed and salted using industry standards.</li>
+            <li> Our web servers encrypt data in transit using the industry standard for HTTPS security (TLS 1.2) so that requests are protected from eavesdroppers and man-in-the-middle attacks. Our SSL certificates are 2048 bit RSA, signed with SHA256.</li>
+            <li> All persistent data is encrypted at rest using industry-standard AES-256 algorithms.</li>
+            <li> All employee contracts include a confidentiality agreement.</li>
+            <li> All changes to source code are subject to automated testing and any that affect security require pre-commit code review by a qualified engineering peer that includes security, performance and potential-for-abuse analysis.</li>
+            <li> All code is deployed to a staging environment for quality assurance and automated tests must pass prior to updating production services.</li>
+            <li> Client code utilizes multiple techniques to ensure that using the LombardGPT dashboard is safe and that requests are authentic, including XSS and CSRF protection, signed and encrypted user authentication cookies and session expiration.</li>
+         </ol>
+         <p> If you have a concern, question or comment about security, please send an email to <a class="font-bold hover:text-blue-700" href="mailto:hello@lomb.st">hello@lomb.st</span></a>.</p>
+         <p class="text-kale">Last updated 24 May, 2023</p>
+      </div>
+      <footer class="max-w-4xl md:gap-6 mx-auto px-8 text-base pb-20 md:pb-48">
+         <div>
+            <p> Copyright &copy; <span id="date"></span> Lombard Standard K.K. <br> <a href="/terms" class="text-gray-400 hover:text-blue-700">Terms of Service</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/privacy" class="text-gray-400 hover:text-blue-700">Privacy Policy</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/security" class="text-gray-400 hover:text-blue-700">Security</a> </p>
+            <p class="pt-6 space-x-5 items-center"> <a href="https://aws.amazon.com"> <img alt="AWS" class="inline h-6 grayscale opacity-70" src="img/AWS.png"> </a> <a href="https://www.antler.co"> <img alt="Antler" class="inline h-4 grayscale opacity-70" src="img/Antler.png"> </a> <a href="https://openai.com"> <img alt="OpenAI" class="inline h-4 grayscale opacity-70" src="img/OpenAI.png"> </a> </p>
+         </div>
+      </footer>
+      <script src="js/script.js"></script>
+   </body>
+</html>

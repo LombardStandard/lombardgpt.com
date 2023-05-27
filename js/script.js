@@ -12,7 +12,7 @@ function updateContent() {
    }
 }
 async function i18Loader() {
-   const langs = ['en', 'ja', 'de'];
+   const langs = ['en', 'ja'];
    const langJsons = await Promise.all(
       langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
    );

@@ -17,13 +17,6 @@ async function i18Loader() {
       langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
    );
 
-   const resources = langs.reduce((acc, lang, idx) => {
-      acc[lang] = {
-         translation: langJsons[idx]
-      };
-      return acc;
-   }, {});
-
    await i18next.use(i18nextBrowserLanguageDetector).init({
       fallbackLng: 'en',
       debug: false,

@@ -4,18 +4,23 @@ document.getElementById('date').innerHTML = n;
 
 // i18n integration
 function updateContent() {
-   const i18nElements = document.getElementsByClassName('i18nelement');
-
-   for (const i18nElement of i18nElements) {
-      const key = i18nElement.getAttribute('data-i18n');
-   }
+  const i18nElements = document.getElementsByClassName('i18nelement');
+  for (const i18nElement of i18nElements) {
+    const key = i18nElement.getAttribute('data-i18n');
+    i18nElement.innerHTML = i18next.t(key) || i18nElement.innerHTML;
+  }
 }
 async function i18Loader() {
    const langs = ['en', 'ja'];
    const langJsons = await Promise.all(
       langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
    );
-
+   
+const resources = langs.reduce((acc, lang, idx) => {
+    acc[lang] = { translation: langJsons[idx] };
+    return acc;
+  }, {}); 
+   
    await i18next.use(i18nextBrowserLanguageDetector).init({
       fallbackLng: 'en',
       debug: false,

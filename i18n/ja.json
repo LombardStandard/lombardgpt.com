@@ -10,5 +10,6 @@
   "global-terms": "利用規約",
   "global-privacy": "プライバシーポリシー",
   "global-security": "セキュリティ対策",
-  "global-home-blue": "<img alt='' class='w-4 mr-2' src='img/arrow-left-blue.svg#arrow-left'></img>ホームページ"
+  "global-home-blue": "<img alt='' class='w-4 mr-2' src='img/arrow-left-blue.svg#arrow-left'></img> ホームページ",
+  "global-home-white": "<img alt='' class='w-4 mr-2' src='img/arrow-left.svg#arrow-left'></img> ホームページ"
 }

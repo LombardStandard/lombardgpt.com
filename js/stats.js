@@ -159,9 +159,7 @@ am5.ready(() => {
   };
 
   const getCountriesLatLong = async () => {
-    return fetch('http://127.0.0.1:8080/js/countries-lat-long.json').then(
-      (res) => res.json()
-    );
+    return fetch('/js/countries-lat-long.json').then((res) => res.json());
   };
 
   const renderDealsMap = (containerId, data) => {

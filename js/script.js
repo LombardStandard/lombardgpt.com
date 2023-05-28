@@ -44,41 +44,6 @@ async function i18Loader() {
   langSelector.value = i18next.language.includes('en')
     ? 'en'
     : i18next.language;
-
-  let closeText = 'OK';
-  let message = 'By viewing this website you agree to our';
-  let link = 'Privacy Policy';
-
-  switch (i18next.language) {
-    case 'ja':
-      closeText = 'OK';
-      message = 'このウェブサイトを閲覧することにより、あなたは私たちの';
-      link = 'プライバシーポリシー。';
-      break;
-    case 'de':
-      closeText = 'OK';
-      message = 'Durch das Betrachten dieser Website stimmen Sie unseren zu';
-      link = 'Datenschutz-Bestimmungen';
-      break;
-  }
-
-  const cookieScript = document.createElement('script');
-  cookieScript.src = 'https://cookieinfoscript.com/js/cookieinfo.min.js';
-  cookieScript.id = 'cookieinfo';
-  cookieScript.setAttribute('data-close-text', closeText);
-  cookieScript.setAttribute('data-font-size', '14px');
-  cookieScript.setAttribute('data-message', message);
-  cookieScript.setAttribute('data-link', '#111827');
-  cookieScript.setAttribute('data-linkmsg', `<b>${link}</b>`);
-  cookieScript.setAttribute(
-    'data-moreinfo',
-    'https://lombardstandard.com/privacy-policy'
-  );
-  cookieScript.setAttribute('data-text-align', 'left');
-  cookieScript.setAttribute('data-bg', '#FDE68A');
-  cookieScript.setAttribute('data-cookie', 'Lombard Standard Analytics');
-
-  document.body.appendChild(cookieScript);
 }
 
 i18Loader();

@@ -13,6 +13,8 @@
       <meta property="og:url" content="https://lombardGPT.com/about" />
       <script src="https://cdn.tailwindcss.com"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+      <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
       <link rel="canonical" href="https://lombardgpt.com/about" />
       <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
@@ -25,7 +27,7 @@
    </head>
    <body>
       <nav class="bg-blue-700 flex items-center py-6 w-full">
-         <div class="px-8"> <a class="flex flex-row text-white" href="/"><img alt="" class="w-4 mr-2" src="img/arrow-left.svg#arrow-left"></img>  Home</a> </div>
+         <div class="px-8"> <a class="flex flex-row text-white i18nelement" data-i18n="global-home-white" href="/"><img alt="" class="w-4 mr-2" src="img/arrow-left.svg#arrow-left"></img>  Home</a> </div>
       </nav>
       <div class="md:max-w-4xl md:my-24 mx-auto my-16 px-8 space-y-4">
          <section class="bg-gray-100 mb-24 p-12 rounded-lg shadow-lg">
@@ -47,9 +49,11 @@
       </div>
       <footer class="md:max-w-4xl mx-auto px-8 text-base pb-20 md:pb-48">
          <div class="border-t pt-8 border-gray-300">
-            <p> Copyright &copy; <span id="date"></span> Lombard Standard K.K. <br> <a href="/terms" class="text-gray-400 hover:text-blue-700">Terms of Service</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/privacy" class="text-gray-400 hover:text-blue-700">Privacy Policy</a></a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/security" class="text-gray-400 hover:text-blue-700">Security</a> </p>
-            <p class="pt-6 space-x-5 items-center"> <a href="https://aws.amazon.com"> <img alt="AWS" class="inline h-6 grayscale opacity-70" src="img/AWS.png"> </a> <a href="https://www.antler.co"> <img alt="Antler" class="inline h-4 grayscale opacity-70" src="img/Antler.png"> </a> <a href="https://openai.com"> <img alt="OpenAI" class="inline h-4 grayscale opacity-70" src="img/OpenAI.png"> </a> </p>
-         </div>
+               <p class="i18nelement inline" data-i18n="global-copyright"> © Lombard Standard K.K.,</p><span class="inline ml-1" id="date">2</span><div>
+               <a href="/terms" class="text-gray-400 hover:text-blue-700 i18nelement" data-i18n="global-terms">Terms of Service</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/privacy" class="text-gray-400 hover:text-blue-700 i18nelement" data-i18n="global-privacy">Privacy Policy</a></a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/security" class="text-gray-400 hover:text-blue-700 i18nelement" data-i18n="global-security">Security</a> </p>
+               <p class="pt-6 space-x-5 items-center"> <a href="https://aws.amazon.com"> <img alt="AWS" class="inline h-6 grayscale opacity-70" src="img/AWS.png"> </a> <a href="https://www.antler.co"> <img alt="Antler" class="inline h-4 grayscale opacity-70" src="img/Antler.png"> </a> <a href="https://openai.com"> <img alt="OpenAI" class="inline h-4 grayscale opacity-70" src="img/OpenAI.png"> </a>
+               </div>
+            </div>
       </footer>
       <script src="js/script.js"></script>
    </body>

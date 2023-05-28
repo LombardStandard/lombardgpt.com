@@ -63,7 +63,7 @@ am5.ready(() => {
 
          document.getElementById('vector-dimensionality').innerHTML =
             vector_dimensionality.toLocaleString();
-         document.getElementById('total-vector-points').innerHTML =
+         document.getElementById('vector-points').innerHTML =
             total_vector_points.toLocaleString();
 
          const {

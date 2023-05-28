@@ -1,5 +1,5 @@
 am5.ready(() => {
-  const API_URL = 'http://54.169.75.250:8000/stats';
+  const API_URL = 'https://api.beta.lombardgpt.com/stats';
   const MAPBOX_ACCESS_KEY =
     'pk.eyJ1IjoiYW1nMjIwNzUiLCJhIjoiY2swajRlMno5MDZjMjNvbTF2MnRpNmd1biJ9.ADtpGBcPTJhWfSn2vWk07w';
   const MONTHS = [

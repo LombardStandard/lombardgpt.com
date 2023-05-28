@@ -1,3 +1,1 @@
-var d = new Date();
-var n = d.getFullYear();
-document.getElementById('date').innerHTML = n;
+document.getElementById('date-year').innerHTML = new Date().getFullYear();

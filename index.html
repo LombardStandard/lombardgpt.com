@@ -1,54 +1,136 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-   <head>
-      <meta charset="utf-8" />
-      <title>LombardGPT</title>
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      <meta name="description" content="LombardGPT tracks real estate investors and ranks potential transactions.">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#1D4ED8" />
-      <meta name="msapplication-TileColor" content="#1d4ed8" />
-      <link rel="canonical" href="https://lombardgpt.com/" />
-      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-      <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="stylesheet" href="css/global.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
-   </head>
-   <body>
-      <header class="max-w-4xl md:gap-6 md:grid md:grid-cols-12 mx-auto px-8">
-         <div class="col-end-12 col-start-1 md:pb-24 md:pt-48 md:space-y-12 py-20 space-y-6">
-            <img alt="LombardGPT" class="w-48" src="img/lombardgpt.svg#logo"> 
-            <h1 class="font-bold tracking-tight text-4xl">LombardGPT tracks real estate investors and ranks potential transactions.</h1>
-            <a href="https://register.lombardgpt.com" class="text-white bg-blue-700 duration-250 ease-out font-medium hover:bg-blue-800 inline-flex items-center justify-between md:text-lg px-5 py-3 rounded-md text-base transition-colors">Get early access</a> 
-         </div>
-      </header>
-      <main class="md:space-y-24 space-y-8 text-xl">
-         <section class="max-w-4xl md:gap-6 md:grid md:grid-cols-12 mx-auto px-8">
-            <div class="md:col-span-12 space-y-2">
-               <div class="grid-cols-12 md:grid">
-                  <p class="col-span-3">About</p>
-                  <p class="col-span-9"><a href="/about" class="text-gray-400 hover:text-blue-700">Our commitment to the industry</a></p>
-               </div>
-               <div class="grid-cols-12 md:grid">
-                  <p class="col-span-3">Database</p>
-                  <p class="col-span-9"><a href="/about" class="text-gray-400 hover:text-blue-700">An AI-powered index of firms</a></p>
-               </div>
-               <div class="grid-cols-12 md:grid">
-                  <p class="col-span-3">Contact</p>
-                  <p class="col-span-9"><a class="text-gray-400 hover:text-blue-700" href="mailto:hello@lomb.st">hello@lomb.st</span></a></p>
-               </div>
-            </div>
-         </section>
-         <footer class="max-w-4xl md:gap-6 mx-auto px-8 text-base pb-20 md:pb-48">
-            <div>
-               <p> Copyright &copy; <span id="date"></span> Lombard Standard K.K. <br> <a href="/terms" class="text-gray-400 hover:text-blue-700">Terms of Service</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/privacy" class="text-gray-400 hover:text-blue-700">Privacy Policy</a></a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="/security" class="text-gray-400 hover:text-blue-700">Security</a> </p>
-               <p class="pt-6 space-x-5 items-center"> <a href="https://aws.amazon.com"> <img alt="AWS" class="inline h-6 grayscale opacity-70" src="img/AWS.png"> </a> <a href="https://www.antler.co"> <img alt="Antler" class="inline h-4 grayscale opacity-70" src="img/Antler.png"> </a> <a href="https://openai.com"> <img alt="OpenAI" class="inline h-4 grayscale opacity-70" src="img/OpenAI.png"> </a> </p>
-            </div>
-         </footer>
-        <script src="js/script.js"></script>
-      </main>
-   </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>LombardGPT</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="LombardGPT tracks real estate investors and ranks potential transactions."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1D4ED8" />
+    <meta name="msapplication-TileColor" content="#1d4ed8" />
+    <link rel="canonical" href="https://lombardgpt.com/" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/"
+      crossorigin=""
+    />
+  </head>
+
+  <body>
+    <header class="max-w-4xl md:gap-6 md:grid md:grid-cols-12 mx-auto px-8">
+      <div
+        class="col-end-12 col-start-1 md:pb-24 md:pt-48 md:space-y-12 py-20 space-y-6"
+      >
+        <img alt="LombardGPT" class="w-48" src="img/lombardgpt.svg#logo" />
+        <h1 class="font-bold tracking-tight text-4xl">
+          LombardGPT tracks real estate investors and ranks potential
+          transactions.
+        </h1>
+        <a
+          href="https://register.lombardgpt.com"
+          class="text-white bg-blue-700 duration-250 ease-out font-medium hover:bg-blue-800 inline-flex items-center justify-between md:text-lg px-5 py-3 rounded-md text-base transition-colors"
+          >Get early access</a
+        >
+      </div>
+    </header>
+
+    <main class="md:space-y-24 space-y-8 text-xl">
+      <section class="max-w-4xl md:gap-6 md:grid md:grid-cols-12 mx-auto px-8">
+        <div class="md:col-span-12 space-y-2">
+          <div class="grid-cols-12 md:grid">
+            <p class="col-span-3">About</p>
+            <p class="col-span-9">
+              <a href="/about" class="text-gray-400 hover:text-blue-700"
+                >Our commitment to the industry</a
+              >
+            </p>
+          </div>
+          <div class="grid-cols-12 md:grid">
+            <p class="col-span-3">Database</p>
+            <p class="col-span-9">
+              <a href="/about" class="text-gray-400 hover:text-blue-700"
+                >An AI-powered index of firms</a
+              >
+            </p>
+          </div>
+          <div class="grid-cols-12 md:grid">
+            <p class="col-span-3">Contact</p>
+            <p class="col-span-9">
+              <a
+                class="text-gray-400 hover:text-blue-700"
+                href="mailto:hello@lomb.st"
+                >hello@lomb.st</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="max-w-4xl md:gap-6 mx-auto px-8 text-base pb-20 md:pb-48">
+        <div>
+          <p>
+            Copyright &copy; <span id="date-year"></span> Lombard Standard K.K.
+            <br />
+            <a href="/terms" class="text-gray-400 hover:text-blue-700"
+              >Terms of Service</a
+            ><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span
+            ><a href="/privacy" class="text-gray-400 hover:text-blue-700"
+              >Privacy Policy</a
+            ><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span
+            ><a href="/security" class="text-gray-400 hover:text-blue-700"
+              >Security</a
+            >
+          </p>
+          <p class="pt-6 space-x-5 items-center">
+            <a href="https://aws.amazon.com">
+              <img
+                alt="AWS"
+                class="inline h-6 grayscale opacity-70"
+                src="img/AWS.png"
+              />
+            </a>
+            <a href="https://www.antler.co">
+              <img
+                alt="Antler"
+                class="inline h-4 grayscale opacity-70"
+                src="img/Antler.png"
+              />
+            </a>
+            <a href="https://openai.com">
+              <img
+                alt="OpenAI"
+                class="inline h-4 grayscale opacity-70"
+                src="img/OpenAI.png"
+              />
+            </a>
+          </p>
+        </div>
+      </footer>
+
+      <script src="js/script.js"></script>
+    </main>
+  </body>
 </html>

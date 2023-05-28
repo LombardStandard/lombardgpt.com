@@ -12,19 +12,9 @@ function updateContent() {
   }
 }
 
-function updateIframes() {
-  const iFrameSub = document.getElementById('iframe-sub');
-  const iFrameLead = document.getElementById('iframe-lead');
-  const lang = i18next.language.includes('en') ? 'en' : i18next.language;
-
-  if (iFrameSub && iFrameLead) {
-    iFrameSub.src = `https://alpha.lombardstandard.com/subscribeForm/?lang=${lang}`;
-    iFrameLead.src = `https://alpha.lombardstandard.com/search_leads_widget/?lang=${lang}`;
-  }
-}
 
 async function i18Loader() {
-  const langs = ['en', 'ja', 'de'];
+  const langs = ['en', 'ja'];
   const langJsons = await Promise.all(
     langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
   );
@@ -41,11 +31,9 @@ async function i18Loader() {
   });
 
   updateContent();
-  updateIframes();
 
   i18next.on('languageChanged', () => {
     updateContent();
-    updateIframes();
   });
 
   const langSelector = document.getElementById('langSelector');

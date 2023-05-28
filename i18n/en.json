@@ -11,5 +11,6 @@
   "global-privacy": "Privacy Policy",
   "global-security": "Security",
   "global-home-blue": "<img alt='' class='w-4 mr-2' src='img/arrow-left-blue.svg#arrow-left'></img> Home",
-  "global-home-white": "<img alt='' class='w-4 mr-2' src='img/arrow-left.svg#arrow-left'></img> Home"
+  "global-home-white": "<img alt='' class='w-4 mr-2' src='img/arrow-left.svg#arrow-left'></img> Home",
+  "about-date": "May 27, 2023"
 }

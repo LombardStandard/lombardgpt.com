@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <title>LombardGPT - Database</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="LombardGPT tracks real estate investors and ranks potential transactions."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1D4ED8" />
+    <meta name="msapplication-TileColor" content="#1d4ed8" />
+    <link rel="canonical" href="https://lombardgpt.com/database" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/"
+      crossorigin=""
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="bg-blue-700 flex items-center py-6 w-full">
+      <div class="px-8">
+        <a class="flex flex-row text-white" href="/"
+          ><img alt="" class="w-4 mr-2" src="img/arrow-left.svg#arrow-left" />
+          Home</a
+        >
+      </div>
+    </nav>
+
+    <div class="lg:max-w-7xl md:my-24 mx-auto my-16 px-8 space-y-4">
+      <date
+        id="date"
+        class="p-3 rounded-lg text-gray-400 bg-gray-100 text-sm font-mono font-bold"
+        >-</date
+      >
+
+      <div class="flex flex-col w-full pt-10">
+        <div class="flex flex-col lg:flex-row items-center w-full mb-20">
+          <div class="w-full lg:w-1/2 min-h-[320px]" id="profileCount"></div>
+
+          <div
+            class="flex flex-col sm:flex-row items-center justify-around w-full lg:w-1/2 mt-20 lg:mt-0"
+          >
+            <div class="flex flex-col items-center justify-center">
+              <h3 class="text-xl text-gray-400">vector_dimensionality</h3>
+              <h2 id="vector-dimensionality" class="text-3xl font-bold">-</h2>
+            </div>
+
+            <div
+              class="flex flex-col items-center justify-center mt-10 sm:mt-0"
+            >
+              <h3 class="text-xl text-gray-400">total_vector_points</h3>
+              <h2 id="total-vector-points" class="text-3xl font-bold">-</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center w-full">
+          <div class="w-full lg:w-1/2 min-h-[320px]" id="sectors"></div>
+
+          <div
+            id="map-container"
+            class="w-full min-h-[320px] mt-10 lg:mt-0 lg:w-1/2"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <script src="js/stats.js"></script>
+  </body>
+</html>

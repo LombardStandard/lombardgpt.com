@@ -12,7 +12,6 @@ function updateContent() {
   }
 }
 
-
 async function i18Loader() {
   const langs = ['en', 'ja'];
   const langJsons = await Promise.all(
@@ -47,4 +46,3 @@ async function i18Loader() {
 }
 
 i18Loader();
-

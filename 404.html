@@ -21,7 +21,15 @@
    <body>
       <header class="md:max-w-4xl mx-auto px-8">
          <div class="md:pb-24 md:pt-48 md:space-y-20 py-20 space-y-12">
+            <div class="flex flex-row justify-between items-center">
             <img alt="LombardGPT" class="w-48" src="img/lombardgpt.svg#logo">
+            <div>
+               <select id="langSelector" name="lang" class="appearance-none inline-flex w-fit px-3 py-2 text-xs rounded-md border bg-white hover:text-blue-700 transition-colors duration-250 ease-out cursor-pointer focus:outline-none border-gray-200">
+                  <option value="en">English</option>
+                  <option value="ja">日本語</option>
+               </select>
+            </div>
+         </div>
             <h1 class="mt-6 font-bold tracking-tight text-4xl">Error 404</h1>
             <div> <a class="flex flex-row text-blue-700" href="https://lombardgpt.com"><img alt="" class="w-4 mr-2" src="img/arrow-left-blue.svg#arrow-left"></img> Home</a> </div>
          </div>

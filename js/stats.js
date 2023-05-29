@@ -218,7 +218,7 @@ am5.ready(() => {
             type: 'geojson',
             data,
             cluster: true,
-            clusterRadius: 50,
+            clusterRadius: 100,
          });
 
          map.addLayer({
@@ -232,17 +232,17 @@ am5.ready(() => {
             paint: {
                'circle-pitch-alignment': 'map',
                'circle-pitch-scale': 'map',
-               'circle-color': '#fff',
+               'circle-color': '#111827',
                'circle-radius': [
                   'step',
                   ['get', 'point_count'],
                   25,
                   300,
-                  35,
+                  30,
                   700,
-                  50
+                  40
                ],
-               'circle-opacity': 0.7,
+               'circle-opacity': 0.2,
                'circle-stroke-width': 0,
                'circle-stroke-opacity': 1,
                'circle-stroke-color': '#111827',
@@ -257,7 +257,7 @@ am5.ready(() => {
             layout: {
                'text-field': '{point_count_abbreviated}',
                'text-font': ['Roboto Regular'],
-               'text-size': 16,
+               'text-size': 14,
                'text-offset': [0, 0],
             },
             paint: {

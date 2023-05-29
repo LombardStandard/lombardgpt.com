@@ -232,7 +232,7 @@ am5.ready(() => {
             paint: {
                'circle-pitch-alignment': 'map',
                'circle-pitch-scale': 'map',
-               'circle-color': '#111827',
+               'circle-color': '#1d4ed8',
                'circle-radius': [
                   'step',
                   ['get', 'point_count'],

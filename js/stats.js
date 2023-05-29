@@ -184,12 +184,12 @@ am5.ready(() => {
          center: [11, 38],
          renderWorldCopies: false,
          zoom: 0,
-         maxZoom: 16,
+         maxZoom: 4,
          minZoom: 0,
          pitch: 0,
          bearing: 0,
          tolerance: 0,
-         interactive: false,
+         interactive: true,
          attributionControl: false,
          localIdeographFontFamily: "'Noto Sans', 'Noto Sans CJK SC', sans-serif",
       });
@@ -204,7 +204,7 @@ am5.ready(() => {
             type: 'geojson',
             data,
             cluster: true,
-            clusterRadius: 100,
+            clusterRadius: 50,
          });
 
          map.addLayer({
@@ -218,18 +218,17 @@ am5.ready(() => {
             paint: {
                'circle-pitch-alignment': 'map',
                'circle-pitch-scale': 'map',
-               'circle-color': [
+               'circle-color': '#fff',
+               'circle-radius': [
                   'step',
                   ['get', 'point_count'],
-                  '#111827',
-                  10,
-                  '#111827',
-                  30,
-                  '#111827',
+                  25,
+                  300,
+                  35,
+                  700,
+                  50
                ],
-               'circle-blur': 0,
-               'circle-radius': 30,
-               'circle-opacity': 0.5,
+               'circle-opacity': 0.7,
                'circle-stroke-width': 0,
                'circle-stroke-opacity': 1,
                'circle-stroke-color': '#111827',
@@ -243,23 +242,12 @@ am5.ready(() => {
             filter: ['has', 'point_count'],
             layout: {
                'text-field': '{point_count_abbreviated}',
-               'text-font': ['Roboto Mono Bold'],
-               'text-size': 16,
+               'text-font': ['Roboto Regular'],
+               'text-size': 14,
                'text-offset': [0, 0],
             },
             paint: {
-               'text-color': '#ffffff'
-            },
-         });
-
-         map.addLayer({
-            id: 'unCluster_count',
-            type: 'circle',
-            source: 'Source',
-            filter: ['!', ['has', 'point_count']],
-            paint: {
-               'circle-color': '#fff',
-               'circle-radius': 6,
+               'text-color': '#111827'
             },
          });
       });

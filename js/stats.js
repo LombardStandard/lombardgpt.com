@@ -243,7 +243,7 @@ am5.ready(() => {
             layout: {
                'text-field': '{point_count_abbreviated}',
                'text-font': ['Roboto Regular'],
-               'text-size': 14,
+               'text-size': 16,
                'text-offset': [0, 0],
             },
             paint: {

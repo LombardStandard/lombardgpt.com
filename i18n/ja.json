@@ -42,6 +42,6 @@
   "security-section-6": "ソース コードへのすべての変更は自動テストの対象となり、セキュリティに影響を与える変更には、セキュリティ、パフォーマンス、悪用の可能性の分析を含む、資格のあるエンジニアリング ピアによるコミット前のコード レビューが必要です。",
   "security-section-7": "すべてのコードは品質保証のためにステージング環境にデプロイされ、運用サービスを更新する前に自動テストに合格する必要があります。",
   "security-section-8": "クライアント コードは、LombardGPT ダッシュボードの使用が安全であり、要求が本物であることを保証するために、XSS および CSRF 保護、署名および暗号化されたユーザー認証 Cookie、セッションの有効期限などの複数の技術を利用しています。",
-  "security-section-9": "セキュリティに関する懸念、質問、コメントがある場合は、<a class='font-bold hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st に電子メールを送信してください。 </span></a>。",
+  "security-section-9": "セキュリティに関する懸念、質問、コメントがある場合は、<a class='font-bold hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st</span></a> に電子メールを送信してください。",
   "security-section-10": "最終更新日: 2023年 5月 24日"
 }

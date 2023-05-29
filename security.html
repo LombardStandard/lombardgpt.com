@@ -14,6 +14,8 @@
       <meta property="og:url" content="https://lombardGPT.com/security" />
       <script src="https://cdn.tailwindcss.com"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+      <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <link rel="canonical" href="https://lombardgpt.com/security" />
       <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
@@ -24,12 +26,18 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
    </head>
    <body>
-      <nav class="bg-blue-700 flex items-center py-6 w-full">
-         <div class="px-8"> <a class="flex flex-row text-white" href="/"><img alt="" class="w-4 mr-2" src="img/arrow-left.svg#arrow-left"></img>  Home</a> </div>
+      <nav class="px-8 flex flex-row bg-blue-700 justify-between items-center py-6 w-full">
+         <div> <a class="flex flex-row text-white i18nelement" data-i18n="global-home-white" href="/"><img alt="" class="w-4 mr-2" src="img/arrow-left.svg#arrow-left"></img>  Home</a> </div>
+         <div>
+            <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-3 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-blue-700">
+               <option value="en">English</option>
+               <option value="ja">日本語</option>
+            </select>
+         </div>
       </nav>
       <div class="md:max-w-4xl md:my-24 mx-auto my-16 px-8 space-y-4">
-         <h1 class="font-extrabold text-4xl">Lombard Standard K.K.</h1>
-         <h2 class="text-xl">Security Overview</h2>
+         <h1 class="font-extrabold text-4xl i18nelement" data-i18n="global-company">Lombard Standard K.K.</h1>
+         <h2 class="text-xl i18nelement" data-i18n="security-title">Security Overview</h2>
          <p>Sales and customer data is critical to your business and we take the security of customer data extremely seriously. We host LombardGPT using comprehensively hardened infrastructure-as-a-service (IaaS) on Amazon Web Services.</p>
          <ol class="list-decimal mt-8">
             <li> LombardGPT will allow authentication using Single Sign On (SSO) via SAML and OIDC. Lombard does not store any passwords for accounts using SSO. For basic authentication, passwords are securely hashed and salted using industry standards.</li>

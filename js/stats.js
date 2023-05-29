@@ -28,7 +28,7 @@ am5.ready(() => {
       const date = new Date();
       const year = date.getFullYear();
 
-      document.getElementById('date').innerHTML = `${
+      document.getElementById('today').innerHTML = `Last updated ${
       MONTHS[date.getMonth()]
     } ${date.getDate()}, ${year}`;
    };
@@ -189,6 +189,7 @@ am5.ready(() => {
          pitch: 0,
          bearing: 0,
          tolerance: 0,
+         interactive: false,
          attributionControl: false,
          localIdeographFontFamily: "'Noto Sans', 'Noto Sans CJK SC', sans-serif",
       });
@@ -203,8 +204,7 @@ am5.ready(() => {
             type: 'geojson',
             data,
             cluster: true,
-            clusterRadius: 5,
-            attribution: '<a>© Lombard Standard</a>',
+            clusterRadius: 100,
          });
 
          map.addLayer({
@@ -228,8 +228,8 @@ am5.ready(() => {
                   '#111827',
                ],
                'circle-blur': 0,
-               'circle-radius': 20,
-               'circle-opacity': 1,
+               'circle-radius': 30,
+               'circle-opacity': 0.5,
                'circle-stroke-width': 0,
                'circle-stroke-opacity': 1,
                'circle-stroke-color': '#111827',
@@ -258,7 +258,7 @@ am5.ready(() => {
             source: 'Source',
             filter: ['!', ['has', 'point_count']],
             paint: {
-               'circle-color': '#111827',
+               'circle-color': '#fff',
                'circle-radius': 6,
             },
          });

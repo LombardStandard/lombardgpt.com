@@ -45,7 +45,7 @@ am5.ready(() => {
          } = await fetch(API_URL).then((res) => res.json());
 
          const profileData = [{
-               category: 'Companies profiles',
+               category: 'Available profiles',
                value: profile_count
             },
             {
@@ -120,52 +120,66 @@ am5.ready(() => {
       const root = am5.Root.new(id);
       root._logo.dispose();
 
+
       const responsive = am5themes_Responsive.new(root);
 
       responsive.addRule({
          relevant: am5themes_Responsive.widthL,
-         applying: function () {
-            series.slices.template.set('tooltipText', '{category}: {value}');
-         },
-         removing: function () {
-            series.slices.template.set('tooltipText', '');
-         },
       });
-
       root.setThemes([am5themes_Animated.new(root), responsive]);
 
       const chart = root.container.children.push(
          am5percent.PieChart.new(root, {
-            radius: am5.percent(70),
+            radius: am5.percent(50),
+            innerRadius: am5.percent(50),
+            centerX: am5.percent(25),
+            layout: am5.GridLayout.new(root, {
+               maxColumns: 3,
+               fixedWidthGrid: true
+            })
+
          })
+
       );
 
       const series = chart.series.push(
          am5percent.PieSeries.new(root, {
             valueField: 'value',
             categoryField: 'category',
+            oversizedBehavior: 'wrap',
+            legendLabelText: "[#9ca3af; fontSize: 14px; fontFamily: Roboto]{category}[/]",
+            legendValueText: "[#111827; bold; fontSize: 14px; fontFamily: Roboto]{value}[/]"
+
          })
       );
 
-      series.states.create('hidden', {
-         endAngle: -90,
-      });
 
       series.data.setAll(data);
+      series.labels.template.set("forceHidden", true);
+      series.ticks.template.set("forceHidden", true);
 
-      series.labels.template.setAll({
-         fontSize: 14,
-         fill: am5.color(0x9ca3af),
-         text: '{category}\n[bold fontSize: 16px]{value}[/]',
-         oversizedBehavior: 'wrap',
-         maxWidth: 170,
+      series.slices.template.setAll({
+         fillOpacity: 1,
+         stroke: am5.color(0xffffff),
+         strokeWidth: 2
       });
 
-      series.slices.template.set('tooltipText', '');
+      series.slices.template.set("tooltipText", "");
+      series.slices.template.set("toggleKey", "none");
 
-      series.ticks.template.setAll({
-         location: 0.5,
-      });
+      var legend = chart.children.push(
+         am5.Legend.new(root, {
+            centerY: am5.percent(50),
+            y: am5.percent(50),
+            x: am5.percent(80),
+            layout: root.verticalLayout,
+            fill: am5.color(0xffffff),
+         })
+      );
+
+      legend.data.setAll(series.dataItems);
+
+
    };
 
    const getCountriesLatLong = async () => {

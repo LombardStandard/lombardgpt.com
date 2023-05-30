@@ -2,6 +2,42 @@ var d = new Date();
 var n = d.getFullYear();
 document.getElementById('date').innerHTML = n;
 
+const detectionOptions = {
+  // order and from where user language should be detected
+  order: [
+    'querystring',
+    'cookie',
+    'localStorage',
+    'navigator',
+    'sessionStorage',
+    'htmlTag',
+    'path',
+    'subdomain',
+  ],
+
+  // keys or params to lookup language from
+  lookupQuerystring: 'lng',
+  lookupCookie: 'i18next',
+  lookupLocalStorage: 'i18nextLng',
+  lookupSessionStorage: 'i18nextLng',
+  lookupFromPathIndex: 0,
+  lookupFromSubdomainIndex: 0,
+
+  // cache user language on
+  caches: ['cookie', 'localStorage'],
+  excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
+
+  // optional expire and domain for set cookie
+  // cookieMinutes: 60,
+  cookieDomain: 'lombardgpt.com',
+
+  // optional htmlTag with lang attribute, the default is:
+  htmlTag: document.documentElement,
+
+  // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+  cookieOptions: { path: '/', sameSite: 'strict' },
+};
+
 // i18n integration
 function updateContent() {
   const i18nElements = document.getElementsByClassName('i18nelement');
@@ -27,6 +63,7 @@ async function i18Loader() {
     fallbackLng: 'en',
     debug: false,
     resources,
+    detection: detectionOptions,
   });
 
   updateContent();

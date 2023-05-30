@@ -191,9 +191,7 @@ window.addEventListener('load', async () => {
     const date = new Date();
     const year = date.getFullYear();
 
-    document.getElementById('today').innerHTML = `${t['Last updated']} ${
-      t.months[date.getMonth()]
-    } ${date.getDate()}, ${year}`;
+    document.getElementById('today').innerHTML = `${t['Last updated']} ${year}'年' ${t.months[date.getMonth()]} ${date.getDate()}'日' `;
   };
 
   const fetchStats = async () => {

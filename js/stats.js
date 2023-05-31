@@ -9,13 +9,13 @@ window.addEventListener('load', async () => {
       'Available profiles': 'Available profiles',
       'Upcoming profiles': 'Upcoming profiles',
       'Last updated': 'Last updated',
-      Property: 'Property',
-      Hospitality: 'Hospitality',
+      'Property': 'Property',
+      'Hospitality': 'Hospitality',
       'Investment Management': 'Investment Management',
       'Real Estate': 'Real Estate',
       'Investment Banking': 'Investment Banking',
       'Leasing Real Estate': 'Leasing Real Estate',
-      months: [
+      'months': [
         'January',
         'February',
         'March',
@@ -34,13 +34,13 @@ window.addEventListener('load', async () => {
       'Available profiles': '利用可能なプロファイル',
       'Upcoming profiles': '今後のプロフィール',
       'Last updated': '最終更新',
-      Property: '財産',
-      Hospitality: 'ホスピタリティ',
+      'Property': '財産',
+      'Hospitality': 'ホスピタリティ',
       'Investment Management': '投資管理',
       'Real Estate': '不動産',
       'Investment Banking': '投資銀行業務',
       'Leasing Real Estate': '不動産賃貸業',
-      months: [
+      'months': [
         '1月',
         '2月',
         '3月',

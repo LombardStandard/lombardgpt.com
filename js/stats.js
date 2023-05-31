@@ -15,7 +15,7 @@ window.addEventListener('load', async () => {
       'Real Estate': 'Real Estate',
       'Investment Banking': 'Investment Banking',
       'Leasing Real Estate': 'Leasing Real Estate',
-      'months': ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      'months': ["January","February","March","April","May","June","July","August","September","October","November","December"]
     },
     ja: {
       'Available profiles': '利用可能なプロファイル',
@@ -165,7 +165,7 @@ window.addEventListener('load', async () => {
     const date = new Date();
     const day = d.getDate()
     const year = date.getFullYear();
-    document.getElementById('today').innerHTML = `${day}` || `${t['Last updated']} ${year}年 ${t.months[date.getMonth()]}月 ${date.getDate()}日`;
+    document.getElementById('today').innerHTML = `${t['Last updated']} ${t.months[date.getMonth()]}月 ${day}, ${year}` || `${t['Last updated']} ${year}年 ${t.months[date.getMonth()]}月 ${date.getDate()}日`;
 
   };
 

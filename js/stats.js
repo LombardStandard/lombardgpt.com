@@ -9,13 +9,13 @@ window.addEventListener('load', async () => {
       'Available profiles': 'Available profiles',
       'Upcoming profiles': 'Upcoming profiles',
       'Last updated': 'Last updated',
-      Property: 'Property',
-      Hospitality: 'Hospitality',
+      'Property': 'Property',
+      'Hospitality': 'Hospitality',
       'Investment Management': 'Investment Management',
       'Real Estate': 'Real Estate',
       'Investment Banking': 'Investment Banking',
       'Leasing Real Estate': 'Leasing Real Estate',
-      months: [
+      'months': [
         'January',
         'February',
         'March',
@@ -34,13 +34,13 @@ window.addEventListener('load', async () => {
       'Available profiles': '利用可能なプロファイル',
       'Upcoming profiles': '今後のプロフィール',
       'Last updated': '最終更新',
-      Property: '財産',
-      Hospitality: 'ホスピタリティ',
+      'Property': '財産',
+      'Hospitality': 'ホスピタリティ',
       'Investment Management': '投資管理',
       'Real Estate': '不動産',
       'Investment Banking': '投資銀行業務',
       'Leasing Real Estate': '不動産賃貸業',
-      months: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      'months': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
     },
   };
 
@@ -181,9 +181,7 @@ window.addEventListener('load', async () => {
     const year = date.getFullYear();
     const localeDates = {
       en: `${t['Last updated']} ${t.months[date.getMonth()]} ${day}, ${year}`,
-      ja: `${t['Last updated']} ${year}年 ${
-        t.months[date.getMonth()]
-      }月 ${day}日`,
+      ja: `${t['Last updated']} ${year}年 ${t.months[date.getMonth()]}月 ${day}日`,
     };
 
     document.getElementById('today').innerHTML = localeDates[currentLang];

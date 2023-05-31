@@ -165,7 +165,7 @@ window.addEventListener('load', async () => {
     const date = new Date();
     const day = d.getDate()
     const year = date.getFullYear();
-    document.getElementById('today').innerHTML = day || `${t['Last updated']} ${year}年 ${t.months[date.getMonth()]}月 ${date.getDate()}日`;
+    document.getElementById('today').innerHTML = `${day}` || `${t['Last updated']} ${year}年 ${t.months[date.getMonth()]}月 ${date.getDate()}日`;
 
   };
 

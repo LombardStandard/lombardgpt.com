@@ -15,20 +15,7 @@ window.addEventListener('load', async () => {
       'Real Estate': 'Real Estate',
       'Investment Banking': 'Investment Banking',
       'Leasing Real Estate': 'Leasing Real Estate',
-      'months': [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ],
+      'months': ["January","February","March","April","May","June","July","August","September","October","November","December"];
     },
     ja: {
       'Available profiles': '利用可能なプロファイル',
@@ -40,20 +27,7 @@ window.addEventListener('load', async () => {
       'Real Estate': '不動産',
       'Investment Banking': '投資銀行業務',
       'Leasing Real Estate': '不動産賃貸業',
-      'months': [
-        '1月',
-        '2月',
-        '3月',
-        '4月',
-        '5月',
-        '6月',
-        '7月',
-        '8月',
-        '9月',
-        '10月',
-        '11月',
-        '12月',
-      ],
+      'months': ["1","2","3","4","5","6","7","8","9","10","11","12"]
     },
   };
 
@@ -189,9 +163,10 @@ window.addEventListener('load', async () => {
   const setDate = () => {
     const t = translations[getCurrentLang()];
     const date = new Date();
+    const day = d.getDate()
     const year = date.getFullYear();
+    document.getElementById('today').innerHTML = day || `${t['Last updated']} ${year}年 ${t.months[date.getMonth()]}月 ${date.getDate()}日`;
 
-    document.getElementById('today').innerHTML = `${t['Last updated']} ${year}'年' ${t.months[date.getMonth()]} ${date.getDate()}'日' `;
   };
 
   const fetchStats = async () => {

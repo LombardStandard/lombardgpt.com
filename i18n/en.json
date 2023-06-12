@@ -72,7 +72,7 @@
   "disclosure-section-1": "<strong>Legal name.</strong> Lombard Standard K.K.",
   "disclosure-section-2": "<strong>Address.</strong> 〒150-0043 Tokyu Building 2F-C, 1-10-8 Dogenzaka Shibuya-ku, Tokyo Japan",
   "disclosure-section-3": "<strong>Phone number.</strong> We will disclose it without delay upon request.",
-  "disclosure-section-4": "<strong>Email address.</strong> <a class="hover:text-blue-700" href="mailto:hello@lomb.st">hello@lomb.st</a>",
+  "disclosure-section-4": "<strong>Email address.</strong> <a class='hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st</a>",
   "disclosure-section-5": "<strong>Head of Operations.</strong>",
   "disclosure-section-6": "<strong>Additional fees.</strong>",
   "disclosure-section-7": "<strong>Exchanges & Returns Policy.</strong>",

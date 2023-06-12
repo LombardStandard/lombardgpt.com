@@ -68,6 +68,18 @@
   "database-vectors-2": "Vector Points",
   "database-companies-1": "Companies Location",
   "database-companies-2": "Companies Count",
-  "database-companies-3": "Companies Sectors"
+  "database-companies-3": "Companies Sectors",
+  "disclosure-section-1": "<strong>Legal name.</strong>",
+  "disclosure-section-2": "<strong>Address.</strong>",
+  "disclosure-section-3": "<strong>Phone number.</strong>",
+  "disclosure-section-4": "<strong>Email address.</strong>",
+  "disclosure-section-5": "<strong>Head of Operations.</strong>",
+  "disclosure-section-6": "<strong>Additional fees.</strong>",
+  "disclosure-section-7": "<strong>Exchanges & Returns Policy.</strong>",
+  "disclosure-section-8": "<strong>Delivery times.</strong>",
+  "disclosure-section-9": "<strong>Accepted payment methods.</strong>",
+  "disclosure-section-10": "<strong>Payment period.</strong>",
+  "disclosure-section-11": "<strong>Price.</strong>",
+  "disclosure-section-12": "Last updated 13 June, 2023"
   
 }

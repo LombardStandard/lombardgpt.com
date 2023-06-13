@@ -13,6 +13,9 @@ window.addEventListener('load', async () => {
          'Hospitality': 'Hospitality',
          'Investment Management': 'Investment Management',
          'Real Estate': 'Real Estate',
+         'Financial Services': 'Financial Services',
+         'Real Estate Development': 'Real Estate Development',
+         'Others': 'Others',
          'Investment Banking': 'Investment Banking',
          'Leasing Real Estate': 'Leasing Real Estate',
          'months': [
@@ -38,6 +41,9 @@ window.addEventListener('load', async () => {
          'Hospitality': 'ホスピタリティ',
          'Investment Management': '投資管理',
          'Real Estate': '不動産',
+         'Financial Services': '金融業務',
+         'Real Estate Development': '不動産開発',
+         'Others': 'その他',
          'Investment Banking': '投資銀行',
          'Leasing Real Estate': '賃貸不動産',
          'months': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
@@ -347,7 +353,7 @@ window.addEventListener('load', async () => {
          am5.Legend.new(root, {
             centerY: am5.percent(50),
             y: am5.percent(50),
-            x: am5.percent(60),
+            x: am5.percent(80),
             layout: root.verticalLayout,
             fill: am5.color(0xffffff),
          })

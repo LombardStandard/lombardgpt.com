@@ -347,7 +347,7 @@ window.addEventListener('load', async () => {
          am5.Legend.new(root, {
             centerY: am5.percent(50),
             y: am5.percent(50),
-            x: am5.percent(80),
+            x: am5.percent(90),
             layout: root.verticalLayout,
             fill: am5.color(0xffffff),
          })

@@ -34,7 +34,7 @@ window.addEventListener('load', async () => {
          ],
       },
       ja: {
-         'Available profiles': '現在データベース上にある企業',
+         'Available profiles': 'データベース内の企業',
          'Upcoming profiles': '近日取込予定の企業',
          'Last updated': '最終更新',
          'Asset Management': 'アセットマネジメント',
